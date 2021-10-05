@@ -14,9 +14,12 @@ public class PlayerController : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelo;
 
-    bool isWalking;
+    private bool isWalking;
 
-    Vector3 direction;
+    private Vector3 direction;
+
+    private float animDelay = 0.4f;
+    private float timer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -49,10 +52,17 @@ public class PlayerController : MonoBehaviour
         if (isWalking)
         {
             GetComponent<Animator>().SetInteger("AnimatorState", 1);
+            timer = 0;
         }
         else
         {
-            GetComponent<Animator>().SetInteger("AnimatorState", 0);
+            timer += Time.deltaTime;
+            if (timer >= animDelay)
+            {
+                GetComponent<Animator>().SetInteger("AnimatorState", 0);
+                timer = 0;
+            }
+            //GetComponent<Animator>().SetInteger("AnimatorState", 0);
         }
         
     }
