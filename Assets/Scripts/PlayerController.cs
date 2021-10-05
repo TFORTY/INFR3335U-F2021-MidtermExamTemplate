@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed = 6f;
 
+    public float turnSmoothTime = 0.1f;
+    public float turnSmoothVelo;
+
     Vector3 direction;
 
     // Start is called before the first frame update
@@ -28,6 +31,10 @@ public class PlayerController : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelo, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+
             controller.Move(direction * moveSpeed * Time.deltaTime);
         }
     }
