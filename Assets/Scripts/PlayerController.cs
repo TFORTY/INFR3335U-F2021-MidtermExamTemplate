@@ -62,8 +62,15 @@ public class PlayerController : MonoBehaviour
                 GetComponent<Animator>().SetInteger("AnimatorState", 0);
                 timer = 0;
             }
-            //GetComponent<Animator>().SetInteger("AnimatorState", 0);
+        } 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Coin")
+        {
+            Debug.Log("COIN");
+            Destroy(other.gameObject);
         }
-        
     }
 }
