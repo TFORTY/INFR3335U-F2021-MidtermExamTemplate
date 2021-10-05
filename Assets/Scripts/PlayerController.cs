@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 direction;
 
-    private float animDelay = 0.4f;
+    public float animDelay = 0.1f;
     private float timer = 0.0f;
 
     // Start is called before the first frame update
