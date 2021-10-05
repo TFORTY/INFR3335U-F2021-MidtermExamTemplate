@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelo;
 
+    bool isWalking;
+
     Vector3 direction;
 
     // Start is called before the first frame update
@@ -36,6 +38,22 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
             controller.Move(direction * moveSpeed * Time.deltaTime);
+
+            isWalking = true;
         }
+        else
+        {
+            isWalking = false;
+        }
+
+        if (isWalking)
+        {
+            GetComponent<Animator>().SetInteger("AnimatorState", 1);
+        }
+        else
+        {
+            GetComponent<Animator>().SetInteger("AnimatorState", 0);
+        }
+        
     }
 }
