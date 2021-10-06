@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     public float animDelay = 0.1f;
     private float timer = 0.0f;
+
+    private int coinCount;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +66,11 @@ public class PlayerController : MonoBehaviour
                 timer = 0;
             }
         } 
+
+        if (coinCount == 10)
+        {
+            SceneManager.LoadScene("End");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -71,6 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("COIN");
             Destroy(other.gameObject);
+            coinCount++;
         }
     }
 }
