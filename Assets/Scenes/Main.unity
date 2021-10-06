@@ -3837,7 +3837,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6929638, y: 1}
+    m_SensorSize: {x: 2.413646, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3853,7 +3853,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301739258}
-  m_LocalRotation: {x: 0.28841868, y: 0.000000016475186, z: -0.000000004962642, w: 0.9575044}
+  m_LocalRotation: {x: 0.28841868, y: -0.000000016475186, z: 0.0000000049626414, w: 0.9575044}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13196,7 +13196,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6929638, y: 1}
+    m_SensorSize: {x: 2.413646, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13212,7 +13212,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886349485}
-  m_LocalRotation: {x: 0.25344703, y: -0.000000016644579, z: 0.000000004360905, w: 0.9673493}
+  m_LocalRotation: {x: 0.25344703, y: 0.000000016644583, z: -0.000000004360906, w: 0.9673493}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14217,7 +14217,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.24629246, y: -1.93968e-10, z: -4.9437357e-11, w: 0.9691956}
+  m_LocalRotation: {x: 0.24629246, y: 1.9396805e-10, z: 4.9437142e-11, w: 0.9691956}
   m_LocalPosition: {x: -8.051744, y: 1.2108299, z: -22.370483}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -14513,7 +14513,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6929638, y: 1}
+    m_SensorSize: {x: 2.413646, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14551,7 +14551,7 @@ MonoBehaviour:
     m_MaxSpeed: 300
     m_AccelTime: 0.1
     m_DecelTime: 0.1
-    m_InputAxisName: 
+    m_InputAxisName: Mouse X
     m_InputAxisValue: 0
     m_InvertInput: 1
     m_MinValue: -180
@@ -22078,7 +22078,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.6929638, y: 1}
+    m_SensorSize: {x: 2.413646, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -31372,6 +31372,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3454554228823398205, guid: f7fd76023aa24194eb321d6f077a4b75,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 963194228}
     - target: {fileID: 3454554228823398205, guid: f7fd76023aa24194eb321d6f077a4b75,
         type: 3}
       propertyPath: coinsLeft
