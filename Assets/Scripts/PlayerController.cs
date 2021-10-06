@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,10 +25,13 @@ public class PlayerController : MonoBehaviour
 
     private int coinCount;
 
+    public Text coinsLeft;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        coinsLeft.text = coinCount.ToString("0");
     }
 
     // Update is called once per frame
@@ -71,6 +75,8 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("End");
         }
+
+        CoinsNeeded();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -81,5 +87,10 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             coinCount++;
         }
+    }
+
+    void CoinsNeeded()
+    {
+        coinsLeft.text = coinCount.ToString("");
     }
 }
